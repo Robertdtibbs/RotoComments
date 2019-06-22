@@ -3,15 +3,18 @@ $.getJSON("/articles", function(data) {
   // For each one
   for (var i = 0; i < data.length; i++) {
     // Display the apropos information on the page
-    $("#articles").append("<img src ='" + data[i].img + "'>", "<p data-id='" + data[i]._id + "'>" + data[i].title + "<br />" + data[i].body + "<br />" + data[i].link + "</p>");
+    // $("#articles").append("<div><img src ='" + data[i].img + "'>", "<p data-id='" + data[i]._id + "'>" + data[i].title + "<br />" + data[i].body + "<br />" + data[i].link + "</p></div>");
+    $("#articles").append("<div><img src ='" + data[i].img + "'><div data-id='" + data[i]._id + "'>" + "<h3>" + data[i].title + "</h3><p>" + data[i].body + "<br /> <a href = 'https://www.premierleague.com/" + data[i].link + "'> Read Article </a></p></div></div>" )
   }
 });
 
 
 // Whenever someone clicks a p tag
-$(document).on("click", "p", function() {
-  // Empty the notes from the note section
+$(document).on("click", "p" & "img", function() {
+  // Empty the notes from  the note section
   $("#notes").empty();
+  // $('#myModal').modal(options)
+  
   // Save the id from the p tag
   var thisId = $(this).attr("data-id");
 
