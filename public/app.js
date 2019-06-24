@@ -1,15 +1,22 @@
-// Grab the articles as a json
-$.getJSON("/articles", function(data) {
-  // For each one
-  for (var i = 0; i < data.length; i++) {
-    // Display the apropos information on the page
-    // $("#articles").append("<div><img src ='" + data[i].img + "'>", "<p data-id='" + data[i]._id + "'>" + data[i].title + "<br />" + data[i].body + "<br />" + data[i].link + "</p></div>");
-    $("#articles").append("<div><img src ='" + data[i].img + "'><div data-id='" + data[i]._id + "'>" + "<h3>" + data[i].title + "</h3><p>" + data[i].body + "<br /> <a href = 'https://www.premierleague.com/" + data[i].link + "'> Read Article </a></p></div></div>" )
-  }
-});
+
+function displayArticles(){
+  // Grab the articles as a json
+  $.getJSON("/articles", function(data) {
+    // Clear out old articles.
+    $('#articles').empty();
+    // For each one
+    for (var i = 0; i < data.length; i++) {
+      // Display the apropos information on the page
+      // $("#articles").append("<div><img src ='" + data[i].img + "'>", "<p data-id='" + data[i]._id + "'>" + data[i].title + "<br />" + data[i].body + "<br />" + data[i].link + "</p></div>");
+      $("#articles").append("<div><img src ='" + data[i].img + "'><div data-id='" + data[i]._id + "'>" + "<h3>" + data[i].title + "</h3><p>" + data[i].body + "<br /> <a href = 'https://www.premierleague.com/" + data[i].link + "'> Read Article </a></p></div></div>" )
+    }
+  });
+}
 
 
-// Whenever someone clicks a p tag
+
+
+// Whenever someone clicks a p or img tag
 $(document).on("click", "p" & "img", function() {
   // Empty the notes from  the note section
   $("#notes").empty();
@@ -73,3 +80,7 @@ $(document).on("click", "#savenote", function() {
   $("#titleinput").val("");
   $("#bodyinput").val("");
 });
+
+$(document).on("click", "#scrape", function(){
+  $.get("./scrape").then( displayArticles)
+})

@@ -6,12 +6,8 @@
   <title>EPL NEWS</title>
   <script src="https://code.jquery.com/jquery-3.4.1.js" integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
     crossorigin="anonymous"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"
-    integrity="sha384-UO2eT0CpHqdSJQ6hJty5KVphtPhzWj9WO1clHTMGa3JDZwrnQq4sF86dIHNDz0W1"
-    crossorigin="anonymous"></script>
-  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"
-    integrity="sha384-JjSmVgyd0p3pXB1rRibZUAYoIIy6OrQ6VrjIEaFf/nJGzIxFDsf4x0xIM+B07jRM"
-    crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
+    integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
   <script src="app.js"></script>
   <style>
     body {
@@ -37,7 +33,7 @@
       width: 60%;
       height: 700px;
       align-content: center
-      /* overflow: hidden; */
+        /* overflow: hidden; */
     }
 
     #notes {
@@ -61,6 +57,7 @@
       height: 200px;
       font-size: 18px;
     }
+
     h1 {
       text-align: center;
     }
@@ -70,10 +67,12 @@
 <body>
   <div id="wrapper">
     <h1>Recent Articles</h1>
+    <button type="button" class="btn btn-secondary btn-lg" id="scrape">EPL NEWS</button>
     <div id="articles"></div>
     <div id="notes"></div>
 
   </div>
 
 </body>
+
 </html>
