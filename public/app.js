@@ -17,13 +17,14 @@ function displayArticles(){
 
 
 // Whenever someone clicks a p or img tag
-$(document).on("click", "p" & "img", function() {
-  // Empty the notes from  the note section
-  $("#notes").empty();
-  // $('#myModal').modal(options)
+$(document).on("click", "img", function() {
+  
   
   // Save the id from the p tag
   var thisId = $(this).attr("data-id");
+
+  // Empty the notes from  the note section
+  $("#notes").empty();
 
   // Now make an ajax call for the Article
   $.ajax({
@@ -34,13 +35,13 @@ $(document).on("click", "p" & "img", function() {
     .then(function(data) {
       console.log(data);
       // The title of the article
-      $("#notes").append("<h2>" + data.title + "</h2>");
+      $("#notes").append("<h3> Comment on Article </h3>");
       // An input to enter a new title
       $("#notes").append("<input id='titleinput' name='title' >");
       // A textarea to add a new note body
       $("#notes").append("<textarea id='bodyinput' name='body'></textarea>");
       // A button to submit a new note, with the id of the article saved to it
-      $("#notes").append("<button data-id='" + data._id + "' id='savenote'>Save Note</button>");
+      $("#notes").append("<button data-id='" + data._id + "' id='savenote'>Save Comment</button>");
 
       // If there's a note in the article
       if (data.note) {

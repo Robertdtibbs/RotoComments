@@ -8,123 +8,52 @@
     crossorigin="anonymous"></script>
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css"
     integrity="sha384-ggOyR0iXCbMQv3Xipma34MD+dH/1fQ784/j6cY/iJTQUOhcWr7x9JvoRxT2MZw1T" crossorigin="anonymous">
+  <link rel="stylesheet" type="text/css" href="style.css">
   <script src="app.js"></script>
-  <style>
-    body {
-      background-image: url("https://i.ytimg.com/vi/qrgbvwdNpyo/maxresdefault.jpg");
-      background-attachment: fixed;
-      background-size: cover;
-      height: 100%;
-
-    }
-
-    #wrapper {
-      width: 960px;
-      margin-left: auto;
-      margin-right: auto;
-      padding-top: 5%;
-      /* float: left; */
-
-    }
-
-    #articles {
-      display: inline-block;
-      overflow: auto;
-      width: 60%;
-      height: 700px;
-      align-content: center
-        /* overflow: hidden; */
-    }
-
-    #notes {
-      float: right;
-      width: 30%;
-    }
-
-    textarea,
-    input {
-      display: block;
-      width: 100%;
-      background-color: #FCF5C7;
-    }
-
-    input {
-      height: 36px;
-      font-size: 24px;
-    }
-
-    textarea {
-      height: 200px;
-      font-size: 18px;
-    }
-
-    h1 {
-      text-align: center;
-    }
-
-    /* The sidebar menu */
-    .sidenav {
-      height: 100%;
-      /* Full-height: remove this if you want "auto" height */
-      width: 160px;
-      /* Set the width of the sidebar */
-      position: fixed;
-      /* Fixed Sidebar (stay in place on scroll) */
-      z-index: 1;
-      /* Stay on top */
-      top: 0;
-      /* Stay at the top */
-      left: 0;
-      background-color: #7CFC00;
-      /* Black */
-      overflow-x: hidden;
-      /* Disable horizontal scroll */
-      padding-top: 8%;
-    }
-
-    /* The navigation menu links */
-    .sidenav a {
-      padding: 6px 8px 6px 16px;
-      text-decoration: none;
-      font-size: 25px;
-      color: #818181;
-      display: block;
-    }
-
-    /* When you mouse over the navigation links, change their color */
-    .sidenav a:hover {
-      color: #f1f1f1;
-    }
-
-    /* On smaller screens, where height is less than 450px, change the style of the sidebar (less padding and a smaller font size) */
-    @media screen and (max-height: 450px) {
-      .sidenav {
-        padding-top: 15px;
-      }
-
-      .sidenav a {
-        font-size: 18px;
-      }
-    }
-
-    
-  </style>
 </head>
 
 <header>
-    <nav class="navbar fixed-top navbar-light bg-light">
-        <a class="navbar-brand" href="#"><h1>League News and Comments</h1></a>
-        <button type="button" class="btn btn-secondary btn-lg" id="scrape">EPL NEWS</button>
-      </nav>
+  <nav class="navbar fixed-top navbar-light" style="background-color: #3d195b">
+    <a class="navbar-brand" href="#">
+      <h1 class="head-color">
+        <img src="https://s3.amazonaws.com/premierleague-static-files/premierleague/pl_icon.png" width="60" height="60"
+          class="d-inline-block align-top" alt="">
+        Premier League News and Comments
+      </h1>
+
+    </a>
+    <button type="button" class="btn btn-secondary btn-lg" id="scrape">Click for EPL NEWS</button>
+  </nav>
 </header>
 
 <body>
   <div class="sidenav">
-    <h3>Club Sites</h3>
-    <a href="#">About</a>
-    <a href="#">Services</a>
-    <a href="#">Clients</a>
-    <a href="#">Contact</a>
+    <h3 class="club-sites">Club Sites</h3>
+    <a class="clubs" href="https://www.premierleague.com/clubs/10/Liverpool/overview" target="_blank">
+      <img src="https://upload.wikimedia.org/wikipedia/hif/b/bd/Liverpool_FC.png" width="60" height="70"
+        alt="Liverpool">
+    </a>
+    <a class="clubs" href="https://www.premierleague.com/clubs/1/Arsenal/overview" target="_blank">
+      <img src="https://i.pinimg.com/originals/f1/c7/a0/f1c7a000dc20ff2970a503b43ecad32a.png" width="60" height="70"
+        alt="Arsenal">
+    </a>
+    <a class="clubs" href="https://www.premierleague.com/clubs/4/Chelsea/overview" target="_blank">
+      <img src="https://cdn.iconscout.com/icon/free/png-256/chelsea-569430.png" width="70" height="70"
+        alt="Chelsea">
+    </a>
+    <a class="clubs" href="https://www.premierleague.com/clubs/11/Manchester-City/overview" target="_blank">
+      <img src="https://upload.wikimedia.org/wikipedia/en/thumb/e/eb/Manchester_City_FC_badge.svg/1200px-Manchester_City_FC_badge.svg.png" width="70" height="70"
+        alt="Manchester-City">
+    </a>
+    <a class="clubs" href="https://www.premierleague.com/clubs/12/Manchester-United/overview" target="_blank">
+      <img src="https://upload.wikimedia.org/wikipedia/en/thumb/7/7a/Manchester_United_FC_crest.svg/220px-Manchester_United_FC_crest.svg.png" width="70" height="70"
+        alt="Manchester-United">
+    </a>
+    <a class="clubs" href="https://www.premierleague.com/clubs/21/Tottenham-Hotspur/overview" target="_blank">
+      <img src="https://seeklogo.com/images/T/tottenham-hotspur-logo-6E52432EA2-seeklogo.com.png" width="60" height="70"
+        alt="Tottenham">
+    </a>
+
   </div>
 
   <div id="wrapper">
