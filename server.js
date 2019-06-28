@@ -19,8 +19,8 @@ app.use(express.json());
 app.use(express.static("public"));
 
 // Connect to the Mongo DB
-// mongoose.connect("mongodb://localhost/eplTalk", { useNewUrlParser: true });
-mongoose.connect("mongodb://username:RotoComment1@ds243607.mlab.com:43607/heroku_d9d5ssbk", { useNewUrlParser: true });
+mongoose.connect("mongodb://localhost/eplTalk", { useNewUrlParser: true });
+// mongoose.connect("mongodb://username:RotoComment1@ds243607.mlab.com:43607/heroku_d9d5ssbk", { useNewUrlParser: true });
 
 // Routes
 

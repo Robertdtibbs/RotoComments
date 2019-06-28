@@ -7,8 +7,8 @@ function displayArticles(){
     // For each one
     for (var i = 0; i < data.length; i++) {
       // Display the apropos information on the page
-      // $("#articles").append("<div><img src ='" + data[i].img + "'>", "<p data-id='" + data[i]._id + "'>" + data[i].title + "<br />" + data[i].body + "<br />" + data[i].link + "</p></div>");
-      $("#articles").append("<div><img src ='" + data[i].img + "'><div data-id='" + data[i]._id + "'>" + "<h3>" + data[i].title + "</h3><p>" + data[i].body + "<br /> <a href = 'https://www.premierleague.com/" + data[i].link + "'> Read Article </a></p></div></div>" )
+      // $("#articles").append("<p data-id='" + data[i]._id + "'>" + data[i].title + "<br />" + data[i].link + "</p>");
+      $("#articles").append("<div class='comment' data-id='" + data[i]._id + "'><img src ='" + data[i].img + "'><div data-id='" + data[i]._id + "'>" + "<h3>" + data[i].title + "</h3><p>" + data[i].body + "<br /> <a href = 'https://www.premierleague.com/" + data[i].link + "'> Read Article </a></p></div></div>" )
     }
   });
 }
@@ -17,7 +17,7 @@ function displayArticles(){
 
 
 // Whenever someone clicks a p or img tag
-$(document).on("click", "img", function() {
+$(document).on("click", "div.comment", function() {
   
   
   // Save the id from the p tag
@@ -37,9 +37,9 @@ $(document).on("click", "img", function() {
       // The title of the article
       $("#notes").append("<h3> Comment on Article </h3>");
       // An input to enter a new title
-      $("#notes").append("<input id='titleinput' name='title' >");
+      $("#notes").append("<input id='titleinput' name='title' placeholder='Comment Title' >");
       // A textarea to add a new note body
-      $("#notes").append("<textarea id='bodyinput' name='body'></textarea>");
+      $("#notes").append("<textarea id='bodyinput' name='body' placeholder='Comment' ></textarea>");
       // A button to submit a new note, with the id of the article saved to it
       $("#notes").append("<button data-id='" + data._id + "' id='savenote'>Save Comment</button>");
 
